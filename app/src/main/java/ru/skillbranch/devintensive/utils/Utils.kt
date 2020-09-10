@@ -16,7 +16,7 @@ object Utils {
     }
 
     fun toInitials(firstName: String?, lastName: String?): String? {
-        return "${if (!firstName.isNullOrEmpty()) firstName.get(0)else ""}${if (!lastName.isNullOrEmpty()) lastName.get(0) else ""}"
+        return "${if (!firstName.isNullOrEmpty()) firstName.get(0).toUpperCase()else ""}${if (!lastName.isNullOrEmpty()) lastName.get(0).toUpperCase() else ""}"
     }
 
     private fun cir2trans(char: Char):String?{
