@@ -53,7 +53,7 @@ enum class TimeUnits{
 }
 
 private fun num_declension(num:Int):Int{
-    return if (num%100 in 11 .. 19){ 3}
+    return if (num%100 in 11 .. 19)  3
     else {
         when (num % 10) {
             1 -> 1
