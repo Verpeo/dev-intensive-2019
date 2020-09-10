@@ -30,26 +30,26 @@ fun Date.add(value:Int, units: TimeUnits = TimeUnits.SECOND) : Date{
 
 enum class TimeUnits{
     SECOND {
-        override fun plural(num: Int): String {
-            return "${num} ${when (num_declension(num)){1->"секунда";2->"секунды";3->"секунд" else -> ""}}"
+        override fun plural(value: Int): String {
+            return "$value ${when (num_declension(value)){1->"секунда";2->"секунды";3->"секунд" else -> ""}}"
         }
     },
     MINUTE {
-        override fun plural(num: Int): String {
-            return "${num} ${when (num_declension(num)){1->"минута";2->"минуты";3->"минут" else -> ""}}"
+        override fun plural(value: Int): String {
+            return "$value ${when (num_declension(value)){1->"минута";2->"минуты";3->"минут" else -> ""}}"
         }
     },
     HOUR {
-        override fun plural(num: Int): String {
-            return "${num} ${when (num_declension(num)){1->"час";2->"часа";3->"часов" else -> ""}}"
+        override fun plural(value: Int): String {
+            return "$value ${when (num_declension(value)){1->"час";2->"часа";3->"часов" else -> ""}}"
         }
     },
     DAY {
-        override fun plural(num: Int): String {
-            return "${num} ${when (num_declension(num)){1->"день";2->"дня";3->"дней" else -> ""}}"
+        override fun plural(value: Int): String {
+            return "$value ${when (num_declension(value)){1->"день";2->"дня";3->"дней" else -> ""}}"
         }
     };
-    abstract fun plural(num:Int):String
+    abstract fun plural(value:Int):String
 }
 
 private fun num_declension(num:Int):Int{
